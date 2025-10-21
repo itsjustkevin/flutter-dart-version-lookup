@@ -1,0 +1,7 @@
+name: find_dart_version
+description: A local script to find the Dart version for a Flutter tag.
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+dependencies:
+  chalkdart: ^3.0.5
+
