@@ -30,16 +30,8 @@ void main(List<String> args) async {
 
   try {
     var depsContent = await runGit(FLUTTER_REPO, '$flutterTag:DEPS');
-
-    // Bashing my head because I can't figure out why I can't parse
-    // out the Dart revision, so we just remove all white space
-    // and try without it.
-    // The DEPS file uses non-breaking spaces (U+00A0).
-    // This line replaces all of them with regular spaces.
-    var normalizedContent = depsContent.replaceAll('\u00A0', ' ');
-
     var regex = RegExp(r"'dart_revision'\s*:\s*'([^']*)'");
-    var match = regex.firstMatch(normalizedContent);
+    var match = regex.firstMatch(depsContent);
 
     if (match == null) {
       throw Exception(
