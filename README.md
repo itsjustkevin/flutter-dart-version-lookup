@@ -22,3 +22,16 @@ This is the most important step. Open `bin/find_version.dart` and edit the two c
 ```dart
 final FLUTTER_REPO = '${Platform.environment['HOME']}/flutter';
 final DART_SDK_REPO = '${Platform.environment['HOME']}/sdk';
+```
+
+## Usage
+Run the script from the root of this project, passing the Flutter tag you wish to query as an argument.
+
+```bash
+dart run bin/find_version.dart <flutter-tag>
+```
+
+### Example
+```bash
+dart run bin/find_version.dart 3.38.0-0.1.pre
+```
