@@ -43,7 +43,7 @@ void main(List<String> args) async {
 
     if (match == null) {
       throw Exception(
-          "Could not parse 'dart_revision' from DEPS (regex failed after normalizing whitespace).");
+          "Could not parse 'dart_revision' from DEPS.");
     }
 
     var dartRevision = match.group(1)!;
